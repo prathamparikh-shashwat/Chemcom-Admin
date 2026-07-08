@@ -222,9 +222,9 @@ export default function ManageProducts() {
   });
 
   const formatPrice = (p) => {
-    return new Intl.NumberFormat('en-US', {
+    return new Intl.NumberFormat('en-IN', {
       style: 'currency',
-      currency: 'USD',
+      currency: 'INR',
     }).format(p);
   };
 
@@ -445,7 +445,7 @@ export default function ManageProducts() {
 
                 <div className="form-group" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
                   <div>
-                    <label className="form-label" htmlFor="product-price">Unit Price (USD) *</label>
+                    <label className="form-label" htmlFor="product-price">Unit Price (INR) *</label>
                     <input
                       id="product-price"
                       type="number"

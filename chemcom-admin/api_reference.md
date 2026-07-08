@@ -121,10 +121,10 @@ Retrieve all orders associated with a user. Accessible by the user or an admin.
           "product_id": 1,
           "name": "Protective Gloves",
           "quantity": 2,
-          "price": 15.99
+          "price": 1299.00
         }
       ],
-      "total_amount": 31.98,
+      "total_amount": 2598.00,
       "status": "Pending",
       "created_at": "2026-07-08T06:54:45Z"
     }
@@ -144,7 +144,7 @@ Creates a product. Supports file uploads for storing images on Cloudinary.
 * **Request Form Parameters**:
   * `name` (string, required): Name of the product
   * `description` (string, optional): Detailed description
-  * `price` (float, required): Product price
+  * `price` (float, required): Product price in INR
   * `is_active` (boolean, optional, default: true): Active status
   * `file` (binary, optional): Photo image file to upload
 * **Success Response (`200 OK`)**:
@@ -153,7 +153,7 @@ Creates a product. Supports file uploads for storing images on Cloudinary.
     "id": 1,
     "name": "Protective Gloves",
     "description": "Heavy duty protective gloves.",
-    "price": 15.99,
+    "price": 1299.00,
     "photo_url": "https://res.cloudinary.com/cloud-name/image/upload/v12345/products/glove.jpg",
     "is_active": true,
     "created_at": "2026-07-08T06:54:45.786373"
@@ -175,7 +175,7 @@ Retrieve all active products.
       "id": 1,
       "name": "Protective Gloves",
       "description": "Heavy duty protective gloves.",
-      "price": 15.99,
+      "price": 1299.00,
       "photo_url": "https://res.cloudinary.com/cloud-name/image/upload/v12345/products/glove.jpg",
       "is_active": true,
       "created_at": "2026-07-08T06:54:45.786373"
@@ -205,7 +205,7 @@ Updates product metadata and/or replaces the Cloudinary image.
 * **Request Form Parameters**:
   * `name` (string, optional)
   * `description` (string, optional)
-  * `price` (float, optional)
+  * `price` (float, optional): Product price in INR
   * `is_active` (boolean, optional)
   * `file` (binary, optional): New photo image file to upload
 * **Success Response (`200 OK`)**: Updated product object.
@@ -255,16 +255,16 @@ Places a new order. Quantities, item prices, names, and totals are computed and 
         "product_id": 1,
         "name": "Protective Gloves",
         "quantity": 2,
-        "price": 15.99
+        "price": 1299.00
       },
       {
         "product_id": 2,
         "name": "Safety Goggles",
         "quantity": 1,
-        "price": 9.5
+        "price": 799.00
       }
     ],
-    "total_amount": 41.48,
+    "total_amount": 3397.00,
     "status": "Pending",
     "created_at": "2026-07-08T06:54:45.786373"
   }

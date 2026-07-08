@@ -75,7 +75,7 @@ export default function SystemSettings() {
                     onChange={(e) => setAutoApprove(e.target.checked)}
                     disabled={saving}
                   />
-                  Auto-Approve Orders (Total Amount &lt; $50)
+                  Auto-Approve Orders (Total Amount &lt; ₹4000)
                 </label>
                 <p style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginLeft: '28px', marginTop: '-10px' }}>
                   Automatically transition orders from "Pending" to "Approved" if total value is below threshold.
