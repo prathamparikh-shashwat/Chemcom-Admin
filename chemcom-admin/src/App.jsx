@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 import OrderDetails from './pages/OrderDetails';
 import ManageUsers from './pages/ManageUsers';
 import SystemSettings from './pages/SystemSettings';
+import ManageProducts from './pages/ManageProducts';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           {/* Secure Admin Routing */}
           <Route element={<ProtectedAdminRoute />}>
             <Route path="/" element={<Dashboard />} />
+            <Route path="/products" element={<ManageProducts />} />
             <Route path="/orders/:id" element={<OrderDetails />} />
             <Route path="/users" element={<ManageUsers />} />
             <Route path="/system-settings" element={<SystemSettings />} />
